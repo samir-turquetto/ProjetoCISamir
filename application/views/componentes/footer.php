@@ -1,6 +1,19 @@
+<footer class="bg-light mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">Todos direitos reservados.</div>
+            <div class="col-md-6 text-right">
+                <a href="https://google.com.br" target="_blank"> <strong>Google</strong></a>
+            </div>
+        </div>
+    </div>
+</footer>
 
-<!-- Import do jQuery + JS do Bootstrap -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="./asserts/js/bootstrap.min.js"></script>
+<style>
+    footer {              
+        line-height: 40px;
+    }
+</style>
 </body>
+
 </html>
