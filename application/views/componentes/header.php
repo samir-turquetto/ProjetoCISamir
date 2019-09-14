@@ -11,6 +11,7 @@
     <!-- Import do jQuery + JS do Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./asserts/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -29,6 +30,9 @@
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contato">Contato</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>

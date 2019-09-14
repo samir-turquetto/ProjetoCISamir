@@ -9,15 +9,15 @@
             </div>
             <div class="form-group">
                 <label>Nome:</label>
-                <input name="nome" type="text" class="form-control" placeholder="Digite seu nominho" required>
+                <input name="nome" type="text" class="form-control nome" placeholder="Digite seu nominho" required>
             </div>
             <div class="form-group">
                 <label>Email:</label>
-                <input name="email" type="email" class="form-control" placeholder="Digite seu e-mailzinho" required>
+                <input name="email" type="email" class="form-control email" placeholder="Digite seu e-mailzinho" required>
             </div>
             <div class="form-group">
                 <label>Senha:</label>
-                <input name="senha" type="password" class="form-control" placeholder="Digite sua senhazinha" required>
+                <input name="senha" type="password" class="form-control senha" placeholder="Digite sua senhazinha" required>
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
@@ -32,12 +32,25 @@
                 data: $(this).serialize(),
                 type: 'POST',
                 success: function (data, textStatus, jqHR){
-                    let type = 'danger';
+                    //console.log(data);
+                    
+                    //alert(4)
+
+                    let title = 'danger';
                     if(data.type == 'success'){
-                        type = data.type
+                        title = 'Oba';
+                        $('#form')[0].reset();
+                        $(".alert").removeClass('alert-danger').addClass('alert-success').html(data.msg);
                     }else {
-                        $('.'+data.campo).focus();
+                        $(".alert").addClass("alert-danger").html(data.msg);
+                        //$('.'+ data.campo).focus();
                     }
+
+                    swal(
+                        title,
+                        data.msg,
+                        data.type
+                    )
                 }
             });
         });
